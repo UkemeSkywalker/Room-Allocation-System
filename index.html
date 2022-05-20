@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div>
+        <img src="images/logo.png" alt="logo" />
+        <h2>Room Allocation System</h2>
+      </div>
+      <div class="formContainer">
+        <form>
+          <div>
+            <label for="fname">Fullname:</label>
+            <input type="text" id="fname" name="fname" />
+            <br />
+          </div>
+
+          <div>
+            <label for="role">Role:</label>
+            <br />
+            <select id="role" name="role">
+              <option value="Facilitator">Facilitator</option>
+              <option value="html">html</option>
+              <option value="css">css</option>
+              <option value="javascript">javascript</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="room">Select Room:</label>
+            <br />
+            <select id="room" name="room">
+              <option value="1">Room1</option>
+              <option value="2">Room2</option>
+              <option value="3">Room3</option>
+            </select>
+          </div>
+
+          <div>
+            <label>gender:</label>
+            <br />
+            <label for="male">male:</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <br />
+            <label for="female">female:</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <br />
+          </div>
+
+          <label id="errors"></label>
+          <label id="success"></label>
+
+          <div>
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

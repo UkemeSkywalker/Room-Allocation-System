@@ -1,0 +1,16 @@
+.mainContainer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10%;
+}
+
+h2 {
+  color: red;
+}
+
+.formContainer{
+    border: 1px solid gray;
+    display: flex;
+    padding: 3em;
+}
