@@ -43,6 +43,7 @@ document.getElementById('submit').onclick = (event) => {
   }
 
   rooms[room].push(user)
+  
 
   error.innerHTML = ''
 
