@@ -3,6 +3,8 @@ const rooms = {
   2: [],
   3: [],
 }
+const display = document.getElementById('displayRooms')
+let clickedRoom = 0
 
 document.getElementById('submit').onclick = (event) => {
   event.preventDefault()
@@ -62,11 +64,59 @@ document.getElementById('submit').onclick = (event) => {
   }
 
   //Assign user to Room
-
   const allocateRoom = rooms[room].push(user)
   success.innerHTML = `Success! ${user.fname} you have been assigened ${user.gender}, room ${user.room}`
 
-  // Check if user has a room already
+  // Display Room Allocation for all room
+  display.innerHTML += `<tr class ="roomResult">
+    <td>${room}</td>
+    <td>${user.fname}</td>
+    <td>${user.role}</td>
+    <td>${user.gender}</td>
+  </tr>`
+}
 
-  console.log(user)
+// Display Room 1 Allocation
+document.getElementById('room1').onclick = (e) => {
+  e.preventDefault()
+  clickedRoom = 1
+  clickHandler()
+}
+document.getElementById('room2').onclick = (e) => {
+  e.preventDefault()
+  clickedRoom = 2
+  clickHandler()
+}
+
+document.getElementById('room3').onclick = (e) => {
+  e.preventDefault()
+  clickedRoom = 3
+  clickHandler()
+}
+
+document.getElementById('room0').onclick = (e) => {
+  e.preventDefault()
+  clickedRoom = 0
+  clickHandler()
+}
+
+const clickHandler = () => {
+  display.innerHTML = `<th>Room</th>
+  <th>Name</th>
+  <th>Role</th>
+  <th>Gender</th>`
+  let users = []
+
+  if (clickedRoom === 0) {
+    users = [...rooms[1], ...rooms[2], ...rooms[3]]
+  } else users = rooms[clickedRoom]
+
+  users.forEach((user) => {
+    display.innerHTML += `<tr class ="roomResult">
+    <td>${user.room}</td>
+    <td>${user.fname}</td>
+    <td>${user.role}</td>
+    <td>${user.gender}</td>
+  </tr>`
+  })
 }
