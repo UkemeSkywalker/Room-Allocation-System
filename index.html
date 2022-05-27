@@ -8,11 +8,13 @@
     <title>Document</title>
   </head>
   <body>
+    
     <div class="mainContainer">
       <div>
         <img src="images/logo.png" alt="logo" />
         <h2>Room Allocation System</h2>
       </div>
+      
       <div class="formContainer">
         <form>
           <div class="itemWrap">
@@ -58,8 +60,25 @@
           <div>
             <button type="submit" id="submit">Allocate Room</button>
           </div>
+          <br>
+          <div class="display">
+            <button id="room1"> Room 1 </button >
+            <button  id="room2"> Room 2 </button >
+            <button  id="room3"> Room 3 </button >
+            <button id="room0"> All Rooms </button>
+            <table id="displayRooms">
+              <th>Room</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Gender</th>
+              
+            </table> 
+          </div>
         </form>
+       
+        
       </div>
+      
     </div>
   </body>
   <script src="index.js"></script>

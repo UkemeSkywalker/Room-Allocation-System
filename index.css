@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+  padding-right: 1em;
+}
+
 .mainContainer {
   display: grid;
   justify-content: center;
@@ -47,7 +51,7 @@ form {
   padding-left: 1em;
 }
 
-button {
+#submit {
   width: 100%;
   padding: 1em;
   color: white;
@@ -69,4 +73,14 @@ button {
   color: white;
   padding: 0.1em;
   margin-bottom: 6em;
+}
+
+#displayRooms{
+  margin-top: 2em;
+}
+
+.roomResult{
+  color: white;
+  background-color: rgb(75, 204, 75); 
+  padding: 0.4em;
 }
